@@ -1,5 +1,9 @@
 # Faction Master
 
+## A dynamic quizzing app written in Flask using WebSockets (Flask-SocketIO library) and Celery (for task scheduling)
+
+This is a dynamic quiz application with two rounds of quiz. In the first round there are same questions for all the players. Based on the scores of the players for each of the five factions they are alloted a faction and in the second round they are asked questions related to that faction. Celery is used to schedule the questions (using websocket for pushing and pulling messages between the client and server). For the second round the players are put into rooms based on faction and the questions and answers are sent and processed separately for each of the rooms.
+
 ### Setting up the project:
 Download and install redis db from [this link](https://github.com/MicrosoftArchive/redis/releases/download/win-3.0.504/Redis-x64-3.0.504.msi)
  *(in case of Windows)*
