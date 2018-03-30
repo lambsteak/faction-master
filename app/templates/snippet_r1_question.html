@@ -1,0 +1,10 @@
+<div class="question">
+    {{ question.text }}
+</div>
+<div class="option_div">
+    <ul>
+        {% for option in options %}
+        {{ option.text }}
+        {% endfor %}
+    </ul>
+</div>

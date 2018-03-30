@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>
+        Instructions - Faction Masters
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/static/instruction.css">
+    <style>
+
+        div{
+            background-color:#000000cc;
+            color:white;
+            padding:20px 5px 20px 5px;
+            margin-bottom:15px;
+            font-weight: bolder;
+            font-size: 120%;
+            line-height: 40px;
+        }
+        h1{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+<h1>INSTRUCTIONS:</h1>
+<h2 style="color:black;">Round 1</h2>
+<div>
+    There are 25 questions. 16 minutes. <br>
+You can choose only one option for each question. <br>
+Every answer defines who you are. <br>
+Sit back, relax and answer. There are no wrong answers. Embrace yourselves. <br>
+GO!
+</div>
+<h2 style="color:black;">Round 2</h2>
+<div>
+    You are in the shoes of hero now. And there's only one task left. <br>
+15 questions. 15 minutes. <br>
+All the questions are MCQs. <br>
+You can choose only one option for each question. <br>
+You have to choose the answer that your hero would.
+</div>
+<div>
+    There will be only one winner for all factions combined. They will be awarded prize
+    worth of Rs 2000. Judge's decision is final.
+</div>
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script>
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    socket.on('redirect to round 1', function() {
+            window.location = "/round1";
+        });
+</script>
+
+</body>
+</html>

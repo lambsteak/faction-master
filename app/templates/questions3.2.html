@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faction Masters: Round 1</title>
+    <style>
+
+
+body {
+    background-color: #333;
+    background-image: url("/static/FM.jpg");
+    background-repeat:no-repeat;
+    background-position:100% 0;
+    background-attachment:fixed;
+    background-size:100% 100%;
+    display:block;
+  }
+
+  .container {
+       margin: 0 auto;
+       height:;
+      padding-top:50px;
+  }
+
+  .well {
+      border: none;
+      padding: 0;
+      margin: 0 auto;
+  }
+   #quiz {
+    background: #050505;
+    opacity: .9;
+    filter: alpha(opacity=75);
+    padding-bottom: 45px;
+    width: 800px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+  }
+
+  #quiz > h1 {
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 100px;
+    opacity: .9;
+  }
+
+  .question {
+    font-size:40px;
+    font-weight: 700;
+    font-family: 'Pathway Gothic One';
+    border-bottom: 1px solid grey;
+    padding: 20px;
+  }
+
+  .answer {
+    padding-left:20%;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+
+  }
+
+  .answer :hover {
+    cursor: pointer;
+    color: #FBCB43;
+  }
+
+#option1{
+  padding-top:10px;
+  height:40px;
+  background-color: green;
+  border-radius: 25px;
+  width:80%;
+}
+#option2{
+  padding-top:10px;
+  height:40px;
+  background-color: green;
+  border-radius: 25px;
+  width:80%;
+}
+#option3{
+  padding-top:10px;
+  height:40px;
+  background-color: green;
+  border-radius: 25px;
+  width:80%;
+}
+#option4{
+  padding-top:10px;
+  height:40px;
+  background-color: green;
+  border-radius: 25px;
+  width:80%;
+}
+
+
+
+
+
+
+  .checkAnswers h3 {
+      font-family: 'Pathway Gothic One', sans-serif;
+      opacity: .8;
+      filter: alpha(opacity=80);
+      font-size: 20px;
+  }
+
+  .checker {
+    display: inline-block;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .correct, .false {
+    background-color: #109D59;
+    width: 60px;
+    height: 30px;
+    border-radius: 20%;
+    line-height: 30px;
+    padding-left: 4px;
+    float: left;
+    margin-left: 2px;
+    margin-top: 2px;
+  }
+
+  .false {
+    background-color: #DC4437;
+  }
+
+  .header{
+
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    color:white;
+    padding-left:200px;
+    padding-top: 25px;
+    font-size: 50px;
+    opacity: .6;
+  }
+
+
+  #timer{
+    padding-left: 10px;
+    padding-top:20px;
+    position:relative;
+    float:right;
+    font-size:40px;
+    width:220px;
+    height:80px;
+    background:none;
+}
+    </style>
+</head>
+<body>
+    <div id="timer"></div>
+    <h1 class="header">Faction Masters: Round 1</h1>
+   <div class="container">
+
+    <div class="well" id="quiz">
+
+
+
+      <p class="question" id="q_div"></p>
+
+<div class="answer">
+<p id="option1" onclick="check(this.id)"></p>
+<p id="option2" onclick="check(this.id)"></p>
+<p id="option3" onclick="check(this.id)"></p>
+<p id="option4" onclick="check(this.id)"></p>
+</div>
+
+
+	      <div class="answers">
+
+	      </div>
+
+
+
+      	<div class="checkAnswers">
+        <h3></h3>
+        <div class="checker">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+// var elms = document.querySelectorAll("[id='option']");
+
+// for(var i = 0; i < elms.length; i++)
+//   elms[i].addEventListener("click", changeColor(e))
+var selected_op = null;
+var prev_q_id = -1;
+
+function check(x) {
+    option1=document.getElementById("option1");
+    option2=document.getElementById("option2");
+    option3=document.getElementById("option3");
+    option4=document.getElementById("option4");
+
+    element = document.getElementById(x);
+    if(element.id=="option1"){
+      console.log("1");
+      selected_op = element.id;
+       option2.style.backgroundColor="green";
+       option3.style.backgroundColor="green";
+       option4.style.backgroundColor="green";
+       option1.style.backgroundColor="red";
+    }
+    else if(element.id=="option2"){
+      console.log("2");
+      selected_op = element.id;
+      console.log(selected_op)
+       option1.style.backgroundColor="green";
+       option3.style.backgroundColor="green";
+       option4.style.backgroundColor="green";
+      option2.style.backgroundColor="red";
+    }
+   else if(element.id=="option3"){
+    console.log("3");
+    selected_op = element.id;
+    console.log(selected_op)
+       option1.style.backgroundColor="green";
+       option2.style.backgroundColor="green";
+       option4.style.backgroundColor="green";
+      option3.style.backgroundColor="red";
+    }
+   else if(element.id=="option4"){
+    console.log("4");
+    selected_op = element.id;
+    console.log(selected_op)
+     option1.style.backgroundColor="green";
+       option2.style.backgroundColor="green";
+       option3.style.backgroundColor="green";
+      option4.style.backgroundColor="red";
+    }
+
+}
+
+
+// Set the date we're counting down to
+
+var countDownDate = new Date().getTime() + 1000 + 40000;
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("timer").innerHTML =  hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "";
+  }
+}, 1000);
+</script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    socket.on('connect', function() {
+            socket.emit('connected');
+        });
+    socket.on('show next question', function(message) {
+        // alert("345");
+        console.log('selected_op: ' + selected_op);
+        console.log('pre: '+ prev_q_id);
+        if (selected_op == null)
+            op_id = null;
+        else
+            op_id = selected_op[selected_op.length - 1]
+        if (selected_op != null) {
+            data = {
+                'round': 1,
+                'question_id': prev_q_id,
+                'option_id': op_id,
+                'email': "{{ player.email }}"
+            };
+            if (prev_q_id >= 0) {
+                $.ajax(
+                    {
+                        url: "/question_response/",
+                        type: "POST",
+                        dataType: "json",
+                        data: JSON.stringify(data)
+                    }
+                );
+            }
+        }
+        prev_q_id++;
+
+        if (!message.q_present)
+            return;
+        $('#q_div').html(message.question.text);
+        for(i=0; i<4; i++) {
+            c = i+1;
+            op = "#option" + c;
+            $(op).html(message.options[i].text);
+            $(op).attr("name", message.options[i].id);
+        }
+        countDownDate = new Date().getTime() + 40000;
+        // selected_op = null;
+
+        op1 = document.getElementById('option1');
+        op1.style.backgroundColor = "green";
+        op2 = document.getElementById('option2');
+        op2.style.backgroundColor = "green";
+        op3 = document.getElementById('option3');
+        op3.style.backgroundColor = "green";
+        op4 = document.getElementById('option4');
+        op4.style.backgroundColor = "green";
+
+        $('#option1').style.backgroundColor = "green";
+        $('#option2').style.backgroundColor = "green";
+        $('#option3').style.backgroundColor = "green";
+        $('#option4').style.backgroundColor = "green";
+
+
+    });
+    socket.on('redirect to end of round 1', function () {
+        window.location = '/display_r1_results/{{ player.email }}';
+        }
+    );
+    socket.on('request for faction', function () {
+        socket.emit('allot faction', {email: '{{ player.email }}'});
+    })
+</script>
+</body>
+</html>

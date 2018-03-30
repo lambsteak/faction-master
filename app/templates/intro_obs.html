@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Welcome to Faction Master!
+        </title>
+    </head>
+
+    <body>
+    <h1>
+        Welcome to Faction Masters, {{ player.name }}! We will begin in [cool timer],
+        other cool messages, pics, animations whatever.
+    </h1>
+    <div id="video_div"></div>
+    <div id="instruction_div"></div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+        socket.on('connect', function() {
+            socket.emit('connected');
+        });
+        socket.on('test event', function(msg) {
+            alert(msg.data);
+        });
+        socket.on('start video', function(message) {
+        });
+        socket.on('stop video', function(message) {
+            $('#video_div').html('');
+            $('#instruction_div').html(message.snippet);
+        });
+        socket.on('redirect to round 1', function(message) {
+            window.href = "/round1";
+        });
+    </script>
+    </body>
+</html>

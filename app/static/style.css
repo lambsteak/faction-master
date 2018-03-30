@@ -1,0 +1,120 @@
+  
+    
+body {
+    background-color: #333;
+    background-image: url('/static/dpool.jpg');
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+       margin: 0 auto;
+       height:;
+      padding-top:50px;
+  }
+  
+  .well {
+      border: none;
+      padding: 0;
+      margin: 0 auto;
+  }
+   #quiz {
+    background: #050505;
+    opacity: .75;
+    filter: alpha(opacity=75);
+    padding-bottom: 45px;
+    width: 800px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    
+  }
+  
+  #quiz > h1 {
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 100px;
+    opacity: .6;
+  }
+  
+  .questions {
+    font-size:50px;
+    font-weight: 700;
+    font-family: 'Pathway Gothic One';
+    border-bottom: 1px solid grey;
+    padding: 20px;
+  }
+  
+  .answers div {
+    padding:  0;
+    font-size: 30px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+  
+  .answers div:hover {
+    cursor: pointer;
+    color: #FBCB43;
+  }
+  
+  .answers {
+    padding: 0px 0 10px 0px;
+  }
+  
+  .answers div:first-child {
+    border: none;
+  }
+  
+  .checkAnswers h3 {
+      font-family: 'Pathway Gothic One', sans-serif;
+      opacity: .8;
+      filter: alpha(opacity=80);
+      font-size: 20px;
+  }
+  
+  .checker {
+    display: inline-block;
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  .correct, .false {
+    background-color: #109D59;
+    width: 60px;
+    height: 30px;
+    border-radius: 20%;
+    line-height: 30px;
+    padding-left: 4px;
+    float: left;
+    margin-left: 2px;
+    margin-top: 2px;
+  }
+  
+  .false {
+    background-color: #DC4437;
+  }
+
+  .header{
+
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    color:white;
+    padding-top: 25px;
+    font-size: 100px;
+    opacity: .6;
+  }
+
+  #demo{
+
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    color:white;
+    padding-top: 25px;
+    font-size: 100px;
+    opacity: .6;
+    padding:50px;
+    float:left;font-size:50px;
+  }

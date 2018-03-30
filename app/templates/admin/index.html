@@ -1,0 +1,26 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+  <ul>
+      <li id="li2">
+          <a href="/conf/refresh_schedule/">Refresh Quiz Schedule Configuration</a>
+          [Do this every time the schedule is modified to bring the changes
+          into effect]
+      </li>
+      <li>
+          <a href="/conf/pause/">Pause the Quiz</a>
+      </li>
+      <li id="li1">
+          <form action="/conf/start_in/" method="post">
+              START QUIZ IN
+            <input type="text" placeholder="0" name="mins" size="2"> minutes
+              <input type="submit" value="Confirm">
+          </form>
+      </li>
+      <li>
+          <a href="/conf/restart_quiz/">RESTART THE QUIZ</a>
+      </li>
+  </ul>
+<h3>Active Schedule:</h3>
+
+{% endblock %}

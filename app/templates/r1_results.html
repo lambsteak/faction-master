@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>
+        Round 1 Results
+    </title>
+    <style>
+        body {
+    background-color: #333;
+    background-image: url("/static/instruction.jpg");
+    background-repeat:no-repeat;
+    background-position:100% 0;
+    background-attachment:fixed;
+    background-size:100% 100%;
+    display:block;
+  }
+    </style>
+</head>
+<body>
+<h1 align="center">You've been allotted the faction {{ faction }}!</h1>
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    socket.on('connect', function() {
+            socket.emit('connected');
+        });
+
+    socket.on('redirect to round 2', function() {
+        window.location = '/round2';
+        });
+
+</script>
+    </body>
+    </html>

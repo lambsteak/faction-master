@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      
+    
+body {
+    background-color: #333;
+    background-image: url("/static/dpool.jpg");
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+       margin: 0 auto;
+       height:;
+      padding-top:50px;
+  }
+  
+  .well {
+      border: none;
+      padding: 0;
+      margin: 0 auto;
+  }
+   #quiz {
+    background: #050505;
+    opacity: .75;
+    filter: alpha(opacity=75);
+    padding-bottom: 45px;
+    width: 800px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    
+  }
+  
+  #quiz > h1 {
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 100px;
+    opacity: .6;
+  }
+  
+  .question {
+    font-size:40px;
+    font-weight: 700;
+    font-family: 'Pathway Gothic One';
+    border-bottom: 1px solid grey;
+    padding: 20px;
+  }
+  
+  .answer {
+    padding-left:20%;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+
+    
+  }
+  
+  .answer :hover {
+    cursor: pointer;
+    color: #FBCB43;
+  }
+
+#option1{
+  background-color: green;
+  width:80%;
+}
+#option2{
+  background-color: green;
+  width:80%;
+}
+#option3{
+  background-color: green;
+  width:80%;
+}
+#option4{
+  background-color: green;
+  width:80%;
+}
+
+  
+
+  
+
+  
+  .checkAnswers h3 {
+      font-family: 'Pathway Gothic One', sans-serif;
+      opacity: .8;
+      filter: alpha(opacity=80);
+      font-size: 20px;
+  }
+  
+  .checker {
+    display: inline-block;
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  .correct, .false {
+    background-color: #109D59;
+    width: 60px;
+    height: 30px;
+    border-radius: 20%;
+    line-height: 30px;
+    padding-left: 4px;
+    float: left;
+    margin-left: 2px;
+    margin-top: 2px;
+  }
+  
+  .false {
+    background-color: #DC4437;
+  }
+
+  .header{
+
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    color:white;
+    padding-left:200px;
+    padding-top: 25px;
+    font-size: 50px;
+    opacity: .6;
+  }
+
+
+  #timer{
+    position:relative;
+    float:right;
+    width:200px;
+    height:100px;
+    background:white;
+}
+    </style>
+</head>
+<body>
+    <div id="timer">Timer kdss</div>
+    <h1 class="header">Faction Masters</h1>
+   <div class="container">
+     
+    <div class="well" id="quiz">
+      
+
+
+      <p class="question">1. What is the answer to this question?</p>
+      
+<div class="answer">
+<p id="option1" onclick="check(this.id)">ANSWER1 </p>
+<p id="option2" onclick="check(this.id)">ANSWER2</p>
+<p id="option3" onclick="check(this.id)">ANSWER3</p>
+<p id="option4" onclick="check(this.id)">ANSWER4</p>
+</div>
+
+
+	      <div class="answers">
+	        
+	      </div>    
+	         
+      
+      
+      	<div class="checkAnswers">
+        <h3>your progress:</h3>
+        <div class="checker">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+// var elms = document.querySelectorAll("[id='option']");
+
+// for(var i = 0; i < elms.length; i++) 
+//   elms[i].addEventListener("click", changeColor(e))
+
+function check(x) {
+    option1=document.getElementById("option1");
+    option2=document.getElementById("option2");
+    option3=document.getElementById("option3");
+    option4=document.getElementById("option4");
+    
+    element = document.getElementById(x);
+    if(element.id=="option1"){
+      console.log("1");
+       option2.style.backgroundColor="green";
+       option3.style.backgroundColor="green";
+       option4.style.backgroundColor="green";
+       option1.style.backgroundColor="red";
+    }
+    else if(element.id=="option2"){
+      console.log("2");
+       option1.style.backgroundColor="green";
+       option3.style.backgroundColor="green";
+       option4.style.backgroundColor="green";
+      option2.style.backgroundColor="red";
+    }
+   else if(element.id=="option3"){
+    console.log("3");
+       option1.style.backgroundColor="green";
+       option2.style.backgroundColor="green";
+       option4.style.backgroundColor="green";
+      option3.style.backgroundColor="red";
+    }
+   else if(element.id=="option4"){
+    console.log("4");
+     option1.style.backgroundColor="green";
+       option2.style.backgroundColor="green";
+       option3.style.backgroundColor="green";
+      option4.style.backgroundColor="red";
+    }
+
+
+
+    
+    
+
+}
+</script>
+
+</body>
+</html>

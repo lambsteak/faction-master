@@ -1,0 +1,19 @@
+<body>
+<div id="a">This is the body.</div>
+<button id="b">Send</button>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    socket.on('my message', function(msg) {
+        $('#a').append('<p>Recieved message: ' + msg.data + '</p>');
+    });
+    $('#b').click(function(event) {
+        socket.emit('client message', {data: 'Hellooo beepboop!'});
+        return false;
+    });
+
+</script>
+
+</body>

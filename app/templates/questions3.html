@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+
+body {
+    background-color: #333;
+    background-image: url("/static/dpool.jpg");
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+       margin: 0 auto;
+       height:;
+      padding-top:50px;
+  }
+
+  .well {
+      border: none;
+      padding: 0;
+      margin: 0 auto;
+  }
+   #quiz {
+    background: #050505;
+    opacity: .75;
+    filter: alpha(opacity=75);
+    padding-bottom: 45px;
+    width: 800px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+  }
+
+  #quiz > h1 {
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 100px;
+    opacity: .6;
+  }
+
+  .question {
+    font-size:40px;
+    font-weight: 700;
+    font-family: 'Pathway Gothic One';
+    border-bottom: 1px solid grey;
+    padding: 20px;
+  }
+
+  .answer {
+    padding:  0;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+
+
+
+
+
+  .checkAnswers h3 {
+      font-family: 'Pathway Gothic One', sans-serif;
+      opacity: .8;
+      filter: alpha(opacity=80);
+      font-size: 20px;
+  }
+
+  .checker {
+    display: inline-block;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .correct, .false {
+    background-color: #109D59;
+    width: 60px;
+    height: 30px;
+    border-radius: 20%;
+    line-height: 30px;
+    padding-left: 4px;
+    float: left;
+    margin-left: 2px;
+    margin-top: 2px;
+  }
+
+  .false {
+    background-color: #DC4437;
+  }
+
+  .header{
+
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    color:white;
+    padding-left:200px;
+    padding-top: 25px;
+    font-size: 50px;
+    opacity: .6;
+  }
+
+
+  #timer{
+    position:relative;
+    float:right;
+    width:200px;
+    height:100px;
+    background:white;
+}
+    </style>
+</head>
+<body>
+    <div id="timer">30</div>
+    <h1 class="header">Faction Masters</h1>
+   <div class="container">
+
+    <div class="well" id="quiz">
+
+
+
+      <p class="question">1. What is the answer to this question?</p>
+
+<ul class="answer">
+<input type="radio"  value="a" id="q1a" name="answer"><label for="q1a">Answer 1</label><br/>
+<input type="radio"  value="b" id="q1b" name="answer"><label for="q1b">Answer 2</label><br/>
+<input type="radio" value="c" id="q1c" name="answer"><label for="q1c">Answer 3</label><br/>
+<input type="radio"  value="d" id="q1d" name="answer"><label for="q1d">Answer 4</label><br/>
+</ul>
+
+
+	      <div class="answers">
+
+	      </div>
+
+
+
+      	<div class="checkAnswers">
+        <h3></h3>
+        <div class="checker">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
